@@ -1,0 +1,758 @@
+{
+	"info": {
+		"_postman_id": "cbe73312-dc52-4bbb-b60f-91629727e5de",
+		"name": "R3ctTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetHireCandidates_200_Ok",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirecandidates",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecandidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHireCandidate_WithHireCandidateId1_200_Ok",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirecandidates/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecandidates",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutHireCandidate_WithHireCandidateId2_204_NoContent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"João Batista\",\r\n    \"age\": 24,\r\n    \"city\": \"Belo Horizonte\",\r\n    \"phone\": \"(31) 99276-7839)\",\r\n    \"email\": \"joaobatista@tempmail.com\",\r\n    \"status\": \"Canceled\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/hirecandidates/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecandidates",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostHireCandidate_201_Created",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Vanessa Matos\",\r\n    \"age\": 28,\r\n    \"city\": \"São Paulo\",\r\n    \"phone\": \"(11) 97569-4398\",\r\n    \"email\": \"vanessamatos@tempmail.com\",\r\n    \"status\": \"Active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/hirecandidates",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecandidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteHireCandidate_WithHireCandidateId3_204_NoContent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirecandidates/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecandidates",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHireJobs_200_Ok",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirejobs",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirejobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHireJob_WithHireJobId1_200_Ok",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirejobs/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirejobs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutHireJob_WithHireJobId2_204_NoContent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"description\": \"Analista de Negócios\",\r\n    \"status\": \"Active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/hirejobs/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirejobs",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostHireJob_201_Created",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"description\": \"Gerente de Marketing Digital\",\r\n    \"status\": \"Active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/hirejobs",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirejobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteHireJob_WithHireJobId3_204_NoContent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirejobs/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirejobs",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHireCurriculums_200_Ok",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirecurriculums",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecurriculums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHireCurriculum_WithHireCurriculumId1_200_Ok",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirecurriculums/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecurriculums",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHireCurriculum_WithHireCandidateId1_200_OK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirecandidates/1/hirecurriculum",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecandidates",
+						"1",
+						"hirecurriculum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutHireCurriculum_WithHireCurriculumId2_204_NoContent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"hireCandidateId\": 2,\r\n    \"worksHistory\": \"Google Inc\",\r\n    \"academicsHistory\": \"Faculdade Cotemig\",\r\n    \"courses\": \"Sistema de Informação\",\r\n    \"summary\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/hirecurriculums/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecurriculums",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostHireCurriculum_201_Created",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hireCandidateId\": 4,\r\n    \"worksHistory\": \"Microsoft Inc\",\r\n    \"academicsHistory\": \"Univesidade Federal de Minas Gerais\",\r\n    \"courses\": \"Ciência da Computação\",\r\n    \"summary\": \"Fala Inglês Fluente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/hirecurriculums",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecurriculums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteHireCurriculum_WithHireCurriculumId3_204_NoContent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hirecurriculums/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hirecurriculums",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHireProcess_WithHireJobId1_200_Ok",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hireprocess/hirejobs/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hireprocess",
+						"hirejobs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHireProcess_WithHireProcessId1_200_Ok",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hireprocess/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hireprocess",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostHireProcess_WithHireJobId2AndHireCandidateId2_201_Created",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hireCandidateId\": 4,\r\n    \"worksHistory\": \"Microsoft Inc\",\r\n    \"academicsHistory\": \"Univesidade Federal de Minas Gerais\",\r\n    \"courses\": \"Ciência da Computação\",\r\n    \"summary\": \"Fala Inglês Fluente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44391/api/hireprocess/hirejobs/2/hirecandidates/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hireprocess",
+						"hirejobs",
+						"2",
+						"hirecandidates",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteHireProcess_WithHireProcessId3_204_NoContent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44391/api/hireprocess/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44391",
+					"path": [
+						"api",
+						"hireprocess",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

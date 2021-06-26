@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R3ctApp", "R3ctApp\R3ctApp.csproj", "{41053152-C6D4-4C54-878F-1E03AF523233}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R3ctApp.Tests", "R3ctApp.Tests\R3ctApp.Tests.csproj", "{8F01622F-7798-47CE-9F2D-7FEB0FD65951}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41053152-C6D4-4C54-878F-1E03AF523233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41053152-C6D4-4C54-878F-1E03AF523233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41053152-C6D4-4C54-878F-1E03AF523233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41053152-C6D4-4C54-878F-1E03AF523233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F01622F-7798-47CE-9F2D-7FEB0FD65951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F01622F-7798-47CE-9F2D-7FEB0FD65951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F01622F-7798-47CE-9F2D-7FEB0FD65951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F01622F-7798-47CE-9F2D-7FEB0FD65951}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC1C2714-4A27-452D-BAF4-1EAE57F5E0CC}
+	EndGlobalSection
+EndGlobal
